@@ -10,10 +10,7 @@
 		2D087FDF296A261600004EC5 /* simonmcneil_squareprojectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */; };
 		2D087FE1296A261600004EC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FE0296A261600004EC5 /* ContentView.swift */; };
 		2D087FE3296A261700004EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D087FE2296A261700004EC5 /* Assets.xcassets */; };
-		2D087FE6296A261700004EC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D087FE5296A261700004EC5 /* Preview Assets.xcassets */; };
 		2D087FF0296A261700004EC5 /* simonmcneil_squareprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FEF296A261700004EC5 /* simonmcneil_squareprojectTests.swift */; };
-		2D087FFA296A261700004EC5 /* simonmcneil_squareprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FF9296A261700004EC5 /* simonmcneil_squareprojectUITests.swift */; };
-		2D087FFC296A261700004EC5 /* simonmcneil_squareprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FFB296A261700004EC5 /* simonmcneil_squareprojectUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +35,9 @@
 		2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simonmcneil_squareprojectApp.swift; sourceTree = "<group>"; };
 		2D087FE0296A261600004EC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D087FE2296A261700004EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2D087FE5296A261700004EC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D087FEB296A261700004EC5 /* simonmcneil_squareprojectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simonmcneil_squareprojectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D087FEF296A261700004EC5 /* simonmcneil_squareprojectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simonmcneil_squareprojectTests.swift; sourceTree = "<group>"; };
 		2D087FF5296A261700004EC5 /* simonmcneil_squareprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simonmcneil_squareprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D087FF9296A261700004EC5 /* simonmcneil_squareprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simonmcneil_squareprojectUITests.swift; sourceTree = "<group>"; };
-		2D087FFB296A261700004EC5 /* simonmcneil_squareprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simonmcneil_squareprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +70,6 @@
 			children = (
 				2D087FDD296A261600004EC5 /* simonmcneil_squareproject */,
 				2D087FEE296A261700004EC5 /* simonmcneil_squareprojectTests */,
-				2D087FF8296A261700004EC5 /* simonmcneil_squareprojectUITests */,
 				2D087FDC296A261600004EC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,20 +87,12 @@
 		2D087FDD296A261600004EC5 /* simonmcneil_squareproject */ = {
 			isa = PBXGroup;
 			children = (
-				2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */,
 				2D087FE0296A261600004EC5 /* ContentView.swift */,
+				2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */,
 				2D087FE2296A261700004EC5 /* Assets.xcassets */,
-				2D087FE4296A261700004EC5 /* Preview Content */,
+				2D088008296A264200004EC5 /* Networking */,
 			);
 			path = simonmcneil_squareproject;
-			sourceTree = "<group>";
-		};
-		2D087FE4296A261700004EC5 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				2D087FE5296A261700004EC5 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		2D087FEE296A261700004EC5 /* simonmcneil_squareprojectTests */ = {
@@ -118,13 +103,11 @@
 			path = simonmcneil_squareprojectTests;
 			sourceTree = "<group>";
 		};
-		2D087FF8296A261700004EC5 /* simonmcneil_squareprojectUITests */ = {
+		2D088008296A264200004EC5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2D087FF9296A261700004EC5 /* simonmcneil_squareprojectUITests.swift */,
-				2D087FFB296A261700004EC5 /* simonmcneil_squareprojectUITestsLaunchTests.swift */,
 			);
-			path = simonmcneil_squareprojectUITests;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D087FE6296A261700004EC5 /* Preview Assets.xcassets in Resources */,
 				2D087FE3296A261700004EC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D087FFC296A261700004EC5 /* simonmcneil_squareprojectUITestsLaunchTests.swift in Sources */,
-				2D087FFA296A261700004EC5 /* simonmcneil_squareprojectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"simonmcneil_squareproject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = TKB32CN29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -445,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"simonmcneil_squareproject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = TKB32CN29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
