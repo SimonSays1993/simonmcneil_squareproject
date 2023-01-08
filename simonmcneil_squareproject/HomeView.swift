@@ -6,7 +6,7 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             List {
-                ForEach(viewModel.employeeSections.sortedByKeyPath(by: \.key), id: \.key) { sectionDetails in
+                ForEach(viewModel.employeeSections, id: \.key) { sectionDetails in
                     Section {
                         ForEach(sectionDetails.value, id: \.uuid) { rowDetails in
                             Text(rowDetails.fullName)

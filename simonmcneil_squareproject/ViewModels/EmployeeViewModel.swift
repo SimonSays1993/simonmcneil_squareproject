@@ -3,7 +3,7 @@ import OrderedCollections
 
 @MainActor
 final class EmployeeViewModel: ObservableObject {
-    @Published var employeeSections: OrderedDictionary<String, [EmployeeSections]> = [:]
+    @Published var employeeSections: [OrderedDictionary<String, [EmployeeSections]>.Element] = []
     @Published var errorMessage: String = ""
     
     private let apiService: APIService
@@ -30,5 +30,6 @@ final class EmployeeViewModel: ObservableObject {
             .sortedByKeyPath(by: \.fullName)
         
         employeeSections = OrderedDictionary(grouping: sortedEmployeesByName) { $0.employeeType }
+            .sortedByKeyPath(by: \.key)        
     }
 }
