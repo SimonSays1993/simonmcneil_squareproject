@@ -5,7 +5,7 @@
 	<key>employeeMalformed</key>
 	<string>https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json</string>
 	<key>employeeDetails</key>
-	<string>https://s3.amazonaws.com/sq-mobile-interview/emploSSSSSyees.json</string>
+	<string>https://s3.amazonaws.com/sq-mobile-interview/employees.json</string>
 	<key>employeeEmptyResponse</key>
 	<string>https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json</string>
 </dict>
