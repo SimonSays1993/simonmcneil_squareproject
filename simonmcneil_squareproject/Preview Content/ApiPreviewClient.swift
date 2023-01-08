@@ -33,4 +33,8 @@ class ApiPreviewClient: APIService {
             throw APIError.failedDecoding
         }
     }
+    
+    func downloadImage(with url: URL) -> Data? {
+        return nil
+    }
 }

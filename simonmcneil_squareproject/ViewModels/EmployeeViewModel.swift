@@ -31,4 +31,8 @@ final class EmployeeViewModel: ObservableObject {
         employeeSections = OrderedDictionary(grouping: sortedEmployeesByName) { $0.employeeType }
             .sortedByKeyPath(by: \.key)        
     }
+    
+    func createImageLoadingViewModel(photoUrl: URL?, id: String) -> ImageLoadingViewModel {
+        ImageLoadingViewModel(imageUrl: photoUrl, imageKey: id)
+    }
 }

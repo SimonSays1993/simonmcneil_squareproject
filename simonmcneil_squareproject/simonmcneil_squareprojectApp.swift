@@ -4,7 +4,7 @@ import SwiftUI
 struct simonmcneil_squareprojectApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: EmployeeViewModel(apiService: ApiClient(), resource: .init(endPoint: APIEndpoint.employeeDetails)))
+            HomeView(viewModel: EmployeeViewModel(apiService: ApiServiceClient(), resource: .init(endPoint: APIEndpoint.employeeDetails)))
         }
     }
 }

@@ -1,7 +1,8 @@
 import Foundation
+import UIKit
 
-struct ApiClient: APIService {
-    
+struct ApiServiceClient: APIService {
+
     func request<T: Decodable>(_ resource: Resource<T>) async throws -> T {
         do {
             let (data, response) = try await URLSession.shared.data(from: resource.createUrl(url: resource.endPoint))
