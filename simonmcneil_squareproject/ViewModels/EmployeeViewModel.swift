@@ -1,8 +1,9 @@
 import SwiftUI
+import OrderedCollections
 
 @MainActor
 final class EmployeeViewModel: ObservableObject {
-    @Published var employee: Employees = Employees(employees: [])
+    @Published var employeeSections: OrderedDictionary<String, [EmployeeSections]> = [:]
     @Published var errorMessage: String = ""
     
     private let apiService: APIService
@@ -15,10 +16,19 @@ final class EmployeeViewModel: ObservableObject {
     
     func fetchEpisodes() async {
         do {
-            employee = try await apiService.request(resource, endpoint: .employeeDetails)
+            let response = try await apiService.request(resource, endpoint: .employeeDetails)
+            createEmployeeSections(with: response.employees)
         } catch {
             errorMessage = error.localizedDescription
             self.errorMessage = errorMessage
         }
+    }
+    
+    func createEmployeeSections(with employees: [EmployeeDetails]) {
+        let sortedEmployeesByName = employees
+            .map { EmployeeSections(employeeType: $0.employeeType.employedStatusDescription, employee: $0 ) }
+            .sortedByKeyPath(by: \.fullName)
+        
+        employeeSections = OrderedDictionary(grouping: sortedEmployeesByName) { $0.employeeType }
     }
 }

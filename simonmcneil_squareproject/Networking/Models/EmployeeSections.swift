@@ -1,7 +1,8 @@
 import Foundation
 
 @dynamicMemberLookup
-struct EmployeeSections {
+struct EmployeeSections: Identifiable {
+    let id: UUID = UUID()
     let employeeType: String
     let employee: EmployeeDetails
     

@@ -27,6 +27,8 @@
 		2DBE23D9296A8FDF007C8BE5 /* ApiPreviewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23D8296A8FDF007C8BE5 /* ApiPreviewClient.swift */; };
 		2DBE23DC296A9B7E007C8BE5 /* DecodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23DB296A9B7E007C8BE5 /* DecodeParser.swift */; };
 		2DBE23DF296B2759007C8BE5 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23DE296B2759007C8BE5 /* EmployeeViewModel.swift */; };
+		2DBE23E3296B2CB3007C8BE5 /* Ext+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23E2296B2CB3007C8BE5 /* Ext+Sequence.swift */; };
+		2DBE23E6296B312B007C8BE5 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2DBE23E5296B312B007C8BE5 /* OrderedCollections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		2DBE23D8296A8FDF007C8BE5 /* ApiPreviewClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPreviewClient.swift; sourceTree = "<group>"; };
 		2DBE23DB296A9B7E007C8BE5 /* DecodeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeParser.swift; sourceTree = "<group>"; };
 		2DBE23DE296B2759007C8BE5 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		2DBE23E2296B2CB3007C8BE5 /* Ext+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Sequence.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBE23E6296B312B007C8BE5 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 		2D087FDD296A261600004EC5 /* simonmcneil_squareproject */ = {
 			isa = PBXGroup;
 			children = (
+				2DBE23E1296B2C98007C8BE5 /* Extensions */,
 				2DBE23DD296B274A007C8BE5 /* ViewModels */,
 				2DBE23BB296A34E7007C8BE5 /* Urls.plist */,
 				2D087FE0296A261600004EC5 /* HomeView.swift */,
@@ -192,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				2DBE23D8296A8FDF007C8BE5 /* ApiPreviewClient.swift */,
-				2DBE23CB296A8EBC007C8BE5 /* Stubs */,
 				2DBE23CF296A8EBC007C8BE5 /* Preview Assets.xcassets */,
+				2DBE23CB296A8EBC007C8BE5 /* Stubs */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -214,6 +219,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		2DBE23E1296B2C98007C8BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DBE23E2296B2CB3007C8BE5 /* Ext+Sequence.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +243,9 @@
 			dependencies = (
 			);
 			name = simonmcneil_squareproject;
+			packageProductDependencies = (
+				2DBE23E5296B312B007C8BE5 /* OrderedCollections */,
+			);
 			productName = simonmcneil_squareproject;
 			productReference = 2D087FDB296A261600004EC5 /* simonmcneil_squareproject.app */;
 			productType = "com.apple.product-type.application";
@@ -302,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 2D087FD2296A261600004EC5;
+			packageReferences = (
+				2DBE23E4296B312B007C8BE5 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 2D087FDC296A261600004EC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,6 +367,7 @@
 			files = (
 				2D087FE1296A261600004EC5 /* HomeView.swift in Sources */,
 				2DBE23BA296A32BD007C8BE5 /* APIEndpoint.swift in Sources */,
+				2DBE23E3296B2CB3007C8BE5 /* Ext+Sequence.swift in Sources */,
 				2DBE23B8296A2FDB007C8BE5 /* Resource.swift in Sources */,
 				2DBE23C2296A3761007C8BE5 /* APIService.swift in Sources */,
 				2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */,
@@ -683,6 +703,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2DBE23E4296B312B007C8BE5 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2DBE23E5296B312B007C8BE5 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DBE23E4296B312B007C8BE5 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D087FD3296A261600004EC5 /* Project object */;
 }

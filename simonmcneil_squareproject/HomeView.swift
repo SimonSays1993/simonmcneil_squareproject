@@ -1,17 +1,26 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var vm: EmployeeViewModel
+    @StateObject var viewModel: EmployeeViewModel
     
     var body: some View {
         ZStack {
-            List(vm.employee.employees, id: \.uuid) { employee in
-                Text(employee.fullName)
+            List {
+                ForEach(viewModel.employeeSections.sortedByKeyPath(by: \.key), id: \.key) { sectionDetails in
+                    Section {
+                        ForEach(sectionDetails.value, id: \.uuid) { rowDetails in
+                            Text(rowDetails.fullName)
+                        }
+                    } header: {
+                        Text(sectionDetails.key)
+                    }
+                }
             }
+            .listStyle(.grouped)
         }
         .onAppear {
             Task {
-                await vm.fetchEpisodes()
+                await viewModel.fetchEpisodes()
             }
         }
     }
@@ -19,6 +28,6 @@ struct HomeView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(vm: EmployeeViewModel(apiService: ApiPreviewClient()))
+        HomeView(viewModel: EmployeeViewModel(apiService: ApiPreviewClient()))
     }
 }
