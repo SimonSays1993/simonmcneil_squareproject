@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>employeeMalformed</key>
+	<string>https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json</string>
+	<key>employeeDetails</key>
+	<string>https://s3.amazonaws.com/sq-mobile-interview/emploSSSSSyees.json</string>
+	<key>employeeEmptyResponse</key>
+	<string>https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json</string>
+</dict>
+</plist>

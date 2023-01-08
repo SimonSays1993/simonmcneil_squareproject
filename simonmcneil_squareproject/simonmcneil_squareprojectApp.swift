@@ -4,7 +4,7 @@ import SwiftUI
 struct simonmcneil_squareprojectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(vm: EmployeeViewModel(apiService: ApiClient()))
         }
     }
 }
