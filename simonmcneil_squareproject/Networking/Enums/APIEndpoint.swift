@@ -1,7 +1,7 @@
 import Foundation
 
-enum APIEndpoint: String {
-    case employeeDetails = "employeeDetails"
+enum APIEndpoint: String, EndpointConfigurable {
+    case employeeDetails
     case employeeEmpty
     case emplpoyeeError
     

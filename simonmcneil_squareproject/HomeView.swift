@@ -20,7 +20,7 @@ struct HomeView: View {
         }
         .onAppear {
             Task {
-                await viewModel.fetchEpisodes()
+                await viewModel.fetchEmployees()
             }
         }
     }
@@ -28,6 +28,6 @@ struct HomeView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: EmployeeViewModel(apiService: ApiPreviewClient()))
+        HomeView(viewModel: EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: APIEndpoint.employeeDetails)))
     }
 }

@@ -2,8 +2,9 @@ import Foundation
 
 struct Resource<T: Decodable> {
     var httpMethod: HTTPMethod = .get
+    var endPoint: EndpointConfigurable
     
-    func createUrl(url: APIEndpoint) throws -> URL {
+    func createUrl(url: EndpointConfigurable) throws -> URL {
         guard let baseUrl = URL(string: url.urlString) else {
             throw APIError.incorrectBaseUrl
         }

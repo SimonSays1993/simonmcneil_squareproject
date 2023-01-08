@@ -1,11 +1,17 @@
 import Foundation
 
-struct ApiPreviewClient: APIService {
-    func request<T>(_ resource: Resource<T>, endpoint: APIEndpoint) async throws -> T {
-        return stubData(for: InfoPlistParser.shared.configUrl(key: endpoint.urlString))
+class ApiPreviewClient: APIService {
+    var fetchSuccessful: Bool = true
+    
+    func request<T>(_ resource: Resource<T>) async throws -> T {
+        do {
+            return try stubData(for: resource.endPoint.urlString)
+        } catch {
+            throw error
+        }
     }
     
-    func stubData<T: Decodable>(for fileName: String) -> T {
+    private func stubData<T: Decodable>(for fileName: String) throws -> T {
         let data: Data
         
         guard let file = Bundle.main.url(forResource: fileName, withExtension: "json") else {
@@ -23,8 +29,8 @@ struct ApiPreviewClient: APIService {
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             return try jsonDecoder.decode(T.self, from: data)
         } catch {
-            fatalError("Couldn't parse \(fileName) as \(T.self):\n\(error)")
+            fetchSuccessful = false
+            throw APIError.failedDecoding
         }
     }
-    
 }
