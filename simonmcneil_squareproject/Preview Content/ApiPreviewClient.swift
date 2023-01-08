@@ -27,7 +27,7 @@ class ApiPreviewClient: APIService {
         do {
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-            return try jsonDecoder.decode(T.self, from: data)
+            return try DecodeParser(decoder: jsonDecoder).decodeData(data: data)
         } catch {
             fetchSuccessful = false
             throw APIError.failedDecoding

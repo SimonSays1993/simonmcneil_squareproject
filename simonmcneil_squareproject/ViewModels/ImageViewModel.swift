@@ -41,6 +41,7 @@ class ImageLoadingViewModel: ObservableObject {
                 self?.isLoading = false
             } receiveValue: { [weak self] returnedImage in
                 guard let self = self, let image = UIImage(data: returnedImage.data) else {
+                    self?.image = UIImage(systemName: "photo.fill")
                     return
                 }
                 self.manager.add(key: self.imageKey, value: image)

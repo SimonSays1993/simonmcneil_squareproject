@@ -5,34 +5,49 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    ForEach(viewModel.employeeSections, id: \.key) { sectionDetails in
-                        Section {
-                            ForEach(sectionDetails.value, id: \.id) { rowDetails in
-                                listRow(content: rowDetails.employee)
-                            }
-                        } header: {
-                            Text(sectionDetails.key)
-                                .font(.headline)
-                        }
-                        Divider()
+            ZStack {
+                if viewModel.employeeSections.isEmpty && viewModel.errorMessage.isEmpty {
+                    emptyView
+                } else if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                } else {
+                    contentView()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading)
+                    .refreshable {
+                        await viewModel.fetchEmployees()
                     }
                 }
+                
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading)
-            .onAppear {
-                Task {
-                    await viewModel.fetchEmployees()
-                }
-            }
-            .navigationTitle("Employee Directory")
-            .refreshable {
+            .navigationTitle(viewModel.navigationTitle)
+        }
+        .onAppear {
+            Task {
                 await viewModel.fetchEmployees()
             }
         }
     }
+    
+    @ViewBuilder
+    func contentView() -> some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(alignment: .leading) {
+                ForEach(viewModel.employeeSections, id: \.key) { sectionDetails in
+                    Section {
+                        ForEach(sectionDetails.value, id: \.id) { rowDetails in
+                            listRow(content: rowDetails.employee)
+                        }
+                    } header: {
+                        Text(sectionDetails.key)
+                            .font(.headline)
+                    }
+                    Divider()
+                }
+            }
+        }
+    }
+    
     
     @ViewBuilder
     func listRow(content: EmployeeDetails) -> some View {
@@ -43,6 +58,16 @@ struct HomeView: View {
             Text(content.fullName)
                 .font(.callout)
                 .padding(.trailing, 20)
+        }
+    }
+    
+    var emptyView: some View {
+        VStack(spacing: 16) {
+            Spacer()
+            Text("No Employees Found")
+            Image(systemName: "person.crop.circle.badge.exclamationmark")
+                .font(.system(size: 100))
+            Spacer()
         }
     }
 }

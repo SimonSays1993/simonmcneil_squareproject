@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>employeeMalformed</key>
+	<key>employeeError</key>
 	<string>https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json</string>
 	<key>employeeDetails</key>
 	<string>https://s3.amazonaws.com/sq-mobile-interview/employees.json</string>
-	<key>employeeEmptyResponse</key>
+	<key>employeeEmpty</key>
 	<string>https://s3.amazonaws.com/sq-mobile-interview/employees_empty.json</string>
 </dict>
 </plist>

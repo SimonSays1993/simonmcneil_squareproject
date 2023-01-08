@@ -3,7 +3,7 @@ import Foundation
 enum APIEndpoint: String, EndpointConfigurable {
     case employeeDetails
     case employeeEmpty
-    case emplpoyeeError
+    case employeeError
     
     var urlString: String {
         switch self {
@@ -11,8 +11,8 @@ enum APIEndpoint: String, EndpointConfigurable {
             return InfoPlistParser.shared.configUrl(key: APIEndpoint.employeeDetails.rawValue)
         case .employeeEmpty:
             return InfoPlistParser.shared.configUrl(key: APIEndpoint.employeeEmpty.rawValue)
-        case .emplpoyeeError:
-            return InfoPlistParser.shared.configUrl(key: APIEndpoint.emplpoyeeError.rawValue)
+        case .employeeError:
+            return InfoPlistParser.shared.configUrl(key: APIEndpoint.employeeError.rawValue)
         }
     }
 }

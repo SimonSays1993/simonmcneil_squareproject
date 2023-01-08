@@ -2,8 +2,9 @@ import SwiftUI
 import OrderedCollections
 
 final class EmployeeViewModel: ObservableObject {
-    @Published var employeeSections: [OrderedDictionary<String, [EmployeeSections]>.Element] = []
-    @Published var errorMessage: String = ""
+    @Published private(set) var employeeSections: [OrderedDictionary<String, [EmployeeSections]>.Element] = []
+    @Published private(set) var errorMessage: String = ""
+    @Published private(set) var navigationTitle: String = "Employee Directory"
     
     private let apiService: APIService
     private let resource: Resource<Employees>
@@ -17,8 +18,12 @@ final class EmployeeViewModel: ObservableObject {
     func fetchEmployees() async {
         do {
             let response = try await apiService.request(resource)
+            if response.employees.isEmpty {
+                employeeSections = []
+            }
             createEmployeeSections(with: response.employees)
         } catch {
+            self.navigationTitle = ""
             self.errorMessage = error.localizedDescription
         }
     }
