@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 enum UIHelper {
-    static func downsampleImage(imageData data: Data, frameSize: CGSize = CGSize(width: 95, height: 200)) -> UIImage? {
+    static func downsampleImage(imageData data: Data, frameSize: CGSize = CGSize(width: 95, height: 95)) -> UIImage? {
         let imageSourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, imageSourceOptions) else {
             return nil
