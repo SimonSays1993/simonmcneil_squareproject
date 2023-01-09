@@ -149,11 +149,9 @@
 				2DBE23E1296B2C98007C8BE5 /* Extensions */,
 				2DBE2404296BC721007C8BE5 /* Models */,
 				2D088008296A264200004EC5 /* Networking */,
-				2DBE23CA296A8EBC007C8BE5 /* Preview Content */,
-				2DBE23BE296A35D9007C8BE5 /* Singletons */,
+				2DBE2407296BD765007C8BE5 /* Presentation */,
 				2DBE23F9296B6C09007C8BE5 /* Utilities */,
 				2DBE23DD296B274A007C8BE5 /* ViewModels */,
-				2DBE23F4296B6B36007C8BE5 /* Views */,
 			);
 			path = simonmcneil_squareproject;
 			sourceTree = "<group>";
@@ -198,14 +196,6 @@
 				2DBE23B9296A32BD007C8BE5 /* APIEndpoint.swift */,
 			);
 			path = Enums;
-			sourceTree = "<group>";
-		};
-		2DBE23BE296A35D9007C8BE5 /* Singletons */ = {
-			isa = PBXGroup;
-			children = (
-				2DBE23BF296A35F0007C8BE5 /* InfoPlistParser.swift */,
-			);
-			path = Singletons;
 			sourceTree = "<group>";
 		};
 		2DBE23C3296A38A1007C8BE5 /* Protocols */ = {
@@ -266,6 +256,7 @@
 		2DBE23F9296B6C09007C8BE5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2DBE23BF296A35F0007C8BE5 /* InfoPlistParser.swift */,
 				2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */,
 				2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */,
 			);
@@ -279,6 +270,15 @@
 				2DBE2405296BC733007C8BE5 /* ImageModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2DBE2407296BD765007C8BE5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2DBE23CA296A8EBC007C8BE5 /* Preview Content */,
+				2DBE23F4296B6B36007C8BE5 /* Views */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,7 +600,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"simonmcneil_squareproject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"simonmcneil_squareproject/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = TKB32CN29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -630,7 +630,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"simonmcneil_squareproject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"simonmcneil_squareproject/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = TKB32CN29K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

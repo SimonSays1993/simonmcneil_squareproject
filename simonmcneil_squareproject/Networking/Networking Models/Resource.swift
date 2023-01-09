@@ -9,7 +9,6 @@ struct Resource<T: Decodable> {
             throw APIError.incorrectBaseUrl
         }
         
-        // Create URL Components
         let components = URLComponents(url: baseUrl, resolvingAgainstBaseURL: false)
         
         guard let url = components?.url else {
