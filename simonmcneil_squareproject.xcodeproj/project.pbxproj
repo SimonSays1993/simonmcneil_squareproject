@@ -145,7 +145,6 @@
 			children = (
 				2DBE23BB296A34E7007C8BE5 /* Urls.plist */,
 				2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */,
-				2D087FE2296A261700004EC5 /* Assets.xcassets */,
 				2DBE23E1296B2C98007C8BE5 /* Extensions */,
 				2DBE2404296BC721007C8BE5 /* Models */,
 				2D088008296A264200004EC5 /* Networking */,
@@ -275,6 +274,7 @@
 		2DBE2407296BD765007C8BE5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2D087FE2296A261700004EC5 /* Assets.xcassets */,
 				2DBE23CA296A8EBC007C8BE5 /* Preview Content */,
 				2DBE23F4296B6B36007C8BE5 /* Views */,
 			);
