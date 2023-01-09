@@ -32,7 +32,6 @@ class ImageLoadingViewModel: ObservableObject {
         }
         
         URLSession.shared.dataTaskPublisher(for: imageUrl)
-            //Here we don't care about the error so that is why we are not using tryMap
             .map { return $0 }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
