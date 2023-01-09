@@ -34,9 +34,11 @@
 		2DBE23F0296B4EE9007C8BE5 /* MockApiEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23EF296B4EE9007C8BE5 /* MockApiEndPoints.swift */; };
 		2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23D8296A8FDF007C8BE5 /* ApiPreviewClient.swift */; };
 		2DBE23F6296B6B47007C8BE5 /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */; };
-		2DBE23F8296B6BBD007C8BE5 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F7296B6BBD007C8BE5 /* ImageViewModel.swift */; };
+		2DBE23F8296B6BBD007C8BE5 /* ImageLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */; };
 		2DBE23FD296B6C50007C8BE5 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */; };
 		2DBE23FF296B6CC5007C8BE5 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */; };
+		2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */; };
+		2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2405296BC733007C8BE5 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +88,11 @@
 		2DBE23ED296B4ECB007C8BE5 /* EndpointConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointConfigurable.swift; sourceTree = "<group>"; };
 		2DBE23EF296B4EE9007C8BE5 /* MockApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiEndPoints.swift; sourceTree = "<group>"; };
 		2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
-		2DBE23F7296B6BBD007C8BE5 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingViewModel.swift; sourceTree = "<group>"; };
 		2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		2DBE2405296BC733007C8BE5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				2DBE23BB296A34E7007C8BE5 /* Urls.plist */,
-				2D087FE0296A261600004EC5 /* HomeView.swift */,
 				2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */,
 				2D087FE2296A261700004EC5 /* Assets.xcassets */,
 				2DBE23E1296B2C98007C8BE5 /* Extensions */,
+				2DBE2404296BC721007C8BE5 /* Models */,
 				2D088008296A264200004EC5 /* Networking */,
 				2DBE23CA296A8EBC007C8BE5 /* Preview Content */,
 				2DBE23BE296A35D9007C8BE5 /* Singletons */,
@@ -169,22 +173,21 @@
 			children = (
 				2DBE23C3296A38A1007C8BE5 /* Protocols */,
 				2DBE23B2296A2D7F007C8BE5 /* Enums */,
-				2DBE23AB296A2C74007C8BE5 /* Models */,
+				2DBE23AB296A2C74007C8BE5 /* Networking Models */,
 				2DBE23C6296A3A8A007C8BE5 /* ApiServiceClient.swift */,
 				2DBE23DB296A9B7E007C8BE5 /* DecodeParser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		2DBE23AB296A2C74007C8BE5 /* Models */ = {
+		2DBE23AB296A2C74007C8BE5 /* Networking Models */ = {
 			isa = PBXGroup;
 			children = (
 				2DBE23AC296A2C9C007C8BE5 /* Employees.swift */,
 				2DBE23AE296A2CC0007C8BE5 /* EmployeeDetails.swift */,
-				2DBE23B0296A2D3E007C8BE5 /* EmployeeSections.swift */,
 				2DBE23B7296A2FDB007C8BE5 /* Resource.swift */,
 			);
-			path = Models;
+			path = "Networking Models";
 			sourceTree = "<group>";
 		};
 		2DBE23B2296A2D7F007C8BE5 /* Enums */ = {
@@ -237,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				2DBE23DE296B2759007C8BE5 /* EmployeeViewModel.swift */,
-				2DBE23F7296B6BBD007C8BE5 /* ImageViewModel.swift */,
+				2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -253,7 +256,9 @@
 		2DBE23F4296B6B36007C8BE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D087FE0296A261600004EC5 /* HomeView.swift */,
 				2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */,
+				2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +270,15 @@
 				2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2DBE2404296BC721007C8BE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DBE23B0296A2D3E007C8BE5 /* EmployeeSections.swift */,
+				2DBE2405296BC733007C8BE5 /* ImageModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +432,8 @@
 				2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */,
 				2DBE23B6296A2DC7007C8BE5 /* HTTPMethod.swift in Sources */,
 				2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */,
+				2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */,
+				2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */,
 				2DBE23AF296A2CC0007C8BE5 /* EmployeeDetails.swift in Sources */,
 				2DBE23C7296A3A8A007C8BE5 /* ApiServiceClient.swift in Sources */,
 				2D087FDF296A261600004EC5 /* simonmcneil_squareprojectApp.swift in Sources */,
@@ -425,7 +441,7 @@
 				2DBE23DC296A9B7E007C8BE5 /* DecodeParser.swift in Sources */,
 				2DBE23B4296A2D8C007C8BE5 /* APIError.swift in Sources */,
 				2DBE23DF296B2759007C8BE5 /* EmployeeViewModel.swift in Sources */,
-				2DBE23F8296B6BBD007C8BE5 /* ImageViewModel.swift in Sources */,
+				2DBE23F8296B6BBD007C8BE5 /* ImageLoadingViewModel.swift in Sources */,
 				2DBE23C0296A35F0007C8BE5 /* InfoPlistParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +609,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,6 +639,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

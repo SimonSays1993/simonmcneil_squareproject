@@ -9,7 +9,7 @@ final class EmployeeViewModel: ObservableObject {
     private let apiService: APIService
     private let resource: Resource<Employees>
 
-    init(apiService: APIService, resource: Resource<Employees>) {
+    init(apiService: APIService = ApiServiceClient(), resource: Resource<Employees>) {
         self.apiService = apiService
         self.resource = resource
     }
@@ -34,10 +34,10 @@ final class EmployeeViewModel: ObservableObject {
             .sortedByKeyPath(by: \.fullName)
         
         employeeSections = OrderedDictionary(grouping: sortedEmployeesByName) { $0.employeeType }
-            .sortedByKeyPath(by: \.key)        
+            .sortedByKeyPath(by: \.key)
     }
     
-    func createImageLoadingViewModel(photoUrl: URL?, id: String) -> ImageLoadingViewModel {
-        ImageLoadingViewModel(imageUrl: photoUrl, imageKey: id)
+    func createImageModel(with employee: EmployeeDetails) -> ImageModel {
+        ImageModel(id: employee.uuid, imageUrl: employee.photoUrlSmall, name: employee.fullName, team: employee.team)
     }
 }

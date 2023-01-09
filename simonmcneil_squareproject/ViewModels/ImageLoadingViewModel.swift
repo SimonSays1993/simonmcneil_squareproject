@@ -6,20 +6,18 @@ class ImageLoadingViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     @Published var isLoading: Bool = false
     
-    let imageUrl: URL?
-    let imageKey: String
-    var cancellables = Set<AnyCancellable>()
-    let manager: ImageCacheManager
+    private var cancellables = Set<AnyCancellable>()
+    private let cacheManager: ImageCacheManager
+    private(set) var imageModel: ImageModel
     
-    init(imageUrl: URL?, imageKey: String, manager: ImageCacheManager = .instance) {
-        self.imageUrl = imageUrl
-        self.imageKey = imageKey
-        self.manager = manager
+    init(imageModel: ImageModel, manager: ImageCacheManager = .instance) {
+        self.imageModel = imageModel
+        self.cacheManager = manager
         getImage()
     }
     
     func getImage() {
-        if let savedImage = manager.get(key: imageKey) {
+        if let savedImage = cacheManager.get(key: imageModel.id) {
             image = savedImage
         } else {
             downloadImage()
@@ -28,7 +26,7 @@ class ImageLoadingViewModel: ObservableObject {
     
     func downloadImage() {
         isLoading = true
-        guard let imageUrl = imageUrl else {
+        guard let imageUrl = imageModel.imageUrl else {
             isLoading = false
             return
         }
@@ -44,7 +42,7 @@ class ImageLoadingViewModel: ObservableObject {
                     self?.image = UIImage(systemName: "photo.fill")
                     return
                 }
-                self.manager.add(key: self.imageKey, value: image)
+                self.cacheManager.add(key: self.imageModel.id, value: image)
                 self.image = UIHelper.downsampleImage(imageData: returnedImage.data)
             }
             .store(in: &cancellables)
