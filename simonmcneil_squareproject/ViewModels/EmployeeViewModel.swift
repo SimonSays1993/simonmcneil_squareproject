@@ -38,6 +38,6 @@ final class EmployeeViewModel: ObservableObject {
     }
     
     func createImageModel(with employee: EmployeeDetails) -> ImageModel {
-        ImageModel(id: employee.uuid, imageUrl: employee.photoUrlLarge, name: employee.fullName, team: employee.team)
+        ImageModel(id: employee.uuid, imageUrl: employee.photoUrlSmall, name: employee.fullName, team: employee.team)
     }
 }
