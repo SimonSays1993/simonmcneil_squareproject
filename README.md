@@ -30,7 +30,7 @@
     
     - Created an engaging UI to follow some of apples HIG. For example using the built in system font sizes so that the project can handle dynamic fonts for accessibility. Added a loading indicator to signal that the users contact information is currently being downloaded, telling the user that some sort of action is being made currently while not locking the UI. Since I am using iOS 14+ too I used LazyVStack and LazyHStack. By default, SwiftUI’s VStack and HStack in iOS13 load all their contents up front, which is likely to be slow if you use them inside a scroll view. To enhance memory usage and storage consumption and load content lazily you should use LazyVStack and LazyHStack. Lastly added two ways to refresh data, iOS 15 has a built in pull to refresh feature for swiftUI, but versions below 15 will use a button to refresh the data. 
     
-    - Focused on also using a caching singleton to store images that has a count limit of 200 and a total cost limit. Also added a downsampling feature for the images for better memomry consumption and scrolling performance in are grid. 
+    - Focused on also using a caching singleton to store images that has a count limit of 200 and a total cost limit. Also added a downsampling feature for the images for better memomry consumption and scrolling performance for the grid. Having the downsampling decreases the memomry by 41 % when using the large image url. 
 
 ## How long did you spend on this project?
 
@@ -66,4 +66,4 @@
     - Built using the iPhone X models, also works both in portrait and landscape mode. 
     - Kept all branches so can checkout each branch to see which portion of the work was done on a specific branch
     - To demonstrate my experience in UI / UX I chose SwiftUI but would also have been capable in creating project in UIKit progrmatically. 
-    - To check the error, and empty response in the following file: simonmcneil_squareprojectApp change the endpoint in the .init
+    - To check the error, and empty response in the following file: simonmcneil_squareprojectApp change the endpoint enum value in the .init
