@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class ImageLoadingViewModel: ObservableObject {
+final class ImageLoadingViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     @Published var isLoading: Bool = false
     
@@ -16,7 +16,7 @@ class ImageLoadingViewModel: ObservableObject {
         getImage()
     }
     
-    func getImage() {
+    private func getImage() {
         if let savedImage = cacheManager.get(key: imageModel.id) {
             image = savedImage
         } else {
@@ -24,7 +24,7 @@ class ImageLoadingViewModel: ObservableObject {
         }
     }
     
-    func downloadImage() {
+    private func downloadImage() {
         isLoading = true
         guard let imageUrl = imageModel.imageUrl else {
             isLoading = false

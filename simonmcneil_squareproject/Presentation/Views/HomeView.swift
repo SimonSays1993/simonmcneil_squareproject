@@ -34,7 +34,7 @@ struct HomeView: View {
     }
     
     @ViewBuilder
-    func contentView(showRefreshButton: Bool = false) -> some View {
+    private func contentView(showRefreshButton: Bool = false) -> some View {
         ScrollView(.vertical, showsIndicators: false) {
             
             CustomNavBar(show: showRefreshButton) {
@@ -43,7 +43,7 @@ struct HomeView: View {
                 }
             }
             
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 170, maximum: 300))]) {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                 ForEach(viewModel.employeeSections, id: \.key) { sectionDetails in
                     Section {
                         ForEach(sectionDetails.value, id: \.id) { rowDetails in
@@ -61,21 +61,20 @@ struct HomeView: View {
                     }
                 }
             }
-            .padding(.trailing)
             .padding(.bottom, 16)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, 5)
-        .padding(.leading, 20)
+        .padding(.horizontal)
     }
     
     @ViewBuilder
-    func imageCardView(details: EmployeeDetails) -> some View {
+    private func imageCardView(details: EmployeeDetails) -> some View {
         DownloadImageView(imageModel: viewModel.createImageModel(with: details))
             .padding(.bottom, 16)
     }
     
-    var emptyView: some View {
+    private var emptyView: some View {
         LazyVStack(spacing: 16) {
             Spacer()
             Text("No Employees Found")
