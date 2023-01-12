@@ -14,7 +14,7 @@ struct CustomNavBar: View {
     var body: some View {
         VStack(spacing: 10) {
             HStack {
-                Text("Leadership Awards")
+                Text("Employee Directory")
                     .font(.system(.largeTitle, design: .rounded))
                     .bold()
                     .foregroundColor(.white)
@@ -36,7 +36,7 @@ struct CustomNavBar: View {
             }
             
             HStack {
-                Text("2022 Employee Winners")
+                Text("Meet some employees at Block")
                     .font(.title3)
                     .bold()
                 Spacer()
