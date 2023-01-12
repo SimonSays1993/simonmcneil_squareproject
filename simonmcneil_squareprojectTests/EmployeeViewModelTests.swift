@@ -5,13 +5,13 @@ final class EmployeeViewModelTests: XCTestCase {
 
     var sut: EmployeeViewModel!
     
-    func testsCreateEmployeeSectionNonEmpty() async throws {
+    func testsCreateEmployeeSectionNonEmpty() async {
         sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeDetails))
         await sut.fetchEmployees()
         XCTAssertFalse(sut.employeeSections.isEmpty)
     }
     
-    func testForContractorEmployeeSection() async throws {
+    func testForContractorEmployeeSection() async {
         sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeDetails))
         await sut.fetchEmployees()
         
@@ -20,7 +20,7 @@ final class EmployeeViewModelTests: XCTestCase {
         XCTAssertEqual(employeeContractorSection.value[0].employeeType, "Contractor")
     }
     
-    func testForFullTimeEmployeeSection() async throws {
+    func testForFullTimeEmployeeSection() async {
         sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeDetails))
         await sut.fetchEmployees()
         
@@ -29,7 +29,7 @@ final class EmployeeViewModelTests: XCTestCase {
         XCTAssertEqual(employeeContractorSection.value[0].employeeType, "Full Time")
     }
     
-    func testForPartTimeEmployeeSection() async throws {
+    func testForPartTimeEmployeeSection() async {
         sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeDetails))
         await sut.fetchEmployees()
         
@@ -55,5 +55,17 @@ final class EmployeeViewModelTests: XCTestCase {
         XCTAssertEqual(imageModel.team, "Core")
         XCTAssertEqual(imageModel.imageUrl, URL(string: "https://s3.amazonaws.com/sq-mobile-interview/photos/b44629e2-47e0-459a-a936-4683f783536b/small.jpg"))
         XCTAssertEqual(imageModel.id, "1")
+    }
+    
+    func testImageContent() async {
+        sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeDetails))
+        await sut.fetchEmployees()
+        
+        let employeeContent = sut.createImageModel(with: sut.employeeSections[0].value[0].employee)
+        
+        XCTAssertEqual(employeeContent.id, "7fb13023-d013-41ac-84f1-e554890ccb32")
+        XCTAssertEqual(employeeContent.imageUrl, URL(string: "https://s3.amazonaws.com/sq-mobile-interview/photos/e2b088e6-0b8d-4295-a66c-d7181cdec3d6/small.jpg")!)
+        XCTAssertEqual(employeeContent.name, "Tim Nakamura")
+        XCTAssertEqual(employeeContent.team, "Hardware")
     }
 }

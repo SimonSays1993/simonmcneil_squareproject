@@ -15,13 +15,13 @@ class ApiPreviewClient: APIService {
         let data: Data
         
         guard let file = Bundle.main.url(forResource: fileName, withExtension: "json") else {
-            fatalError("Coundn't find \(fileName) in main bundle")
+            throw APIError.incorrectBaseUrl
         }
         
         do {
             data = try Data(contentsOf: file)
         } catch {
-            fatalError("Couldn't load \(fileName) from main bundle:\n\(error)")
+            throw APIError.failedRequest
         }
         
         do {

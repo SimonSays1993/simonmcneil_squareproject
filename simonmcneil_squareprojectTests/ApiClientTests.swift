@@ -10,18 +10,25 @@ final class ApiClientTests: XCTestCase {
         client = nil
     }
 
-    func testFetchContent() async throws {
+    func testFetchContent() async {
         let client = ApiPreviewClient()
         sut = EmployeeViewModel(apiService: client, resource: .init(endPoint: MockApiEndPoints.employeeDetails))
         await sut.fetchEmployees()
         XCTAssertTrue(client.fetchSuccessful)
     }
     
-    func testDecodingError() async throws {
+    func testDecodingError() async {
         let client = ApiPreviewClient()
         sut = EmployeeViewModel(apiService: client, resource: .init(endPoint: MockApiEndPoints.decodingError))
         await sut.fetchEmployees()
         XCTAssertEqual(sut.errorMessage, "Failed to Decode Content")
         XCTAssertFalse(client.fetchSuccessful)
+    }
+    
+    func testEmptyResponseError() async {
+        sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeEmpty))
+        await sut.fetchEmployees()
+        XCTAssertTrue(sut.employeeSections.isEmpty)
+        XCTAssertEqual(sut.errorMessage, "")
     }
 }
