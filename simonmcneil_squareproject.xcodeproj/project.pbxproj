@@ -150,7 +150,6 @@
 				2D088008296A264200004EC5 /* Networking */,
 				2DBE2407296BD765007C8BE5 /* Presentation */,
 				2DBE23F9296B6C09007C8BE5 /* Utilities */,
-				2DBE23DD296B274A007C8BE5 /* ViewModels */,
 			);
 			path = simonmcneil_squareproject;
 			sourceTree = "<group>";
@@ -274,6 +273,7 @@
 		2DBE2407296BD765007C8BE5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2DBE23DD296B274A007C8BE5 /* ViewModels */,
 				2D087FE2296A261700004EC5 /* Assets.xcassets */,
 				2DBE23CA296A8EBC007C8BE5 /* Preview Content */,
 				2DBE23F4296B6B36007C8BE5 /* Views */,
@@ -609,7 +609,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,7 +639,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

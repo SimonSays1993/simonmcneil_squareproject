@@ -46,4 +46,11 @@ final class ImageLoadingViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    func placeHolderImage() -> UIImage {
+        guard let image = UIImage(systemName: "photo.fill") else {
+            return UIImage()
+        }
+        return image
+    }
 }

@@ -9,7 +9,7 @@ struct HomeView: View {
                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)), Color(#colorLiteral(red: 0.7843137255, green: 0.4666666667, blue: 0.2, alpha: 1)).opacity(0.4), Color(#colorLiteral(red: 0.007843137255, green: 0.8549019608, blue: 0.8666666667, alpha: 1))]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
-                if viewModel.employeeSections.isEmpty && viewModel.errorMessage.isEmpty {
+                if viewModel.isEmptyView {
                     emptyView
                 } else if !viewModel.errorMessage.isEmpty {
                     Text(viewModel.errorMessage)
@@ -51,7 +51,7 @@ struct HomeView: View {
                         }
                     } header: {
                         HStack {
-                            Text(sectionDetails.key)
+                            Text(viewModel.sectionTitle(with: sectionDetails.key))
                                 .font(.system(.title, design: .rounded))
                                 .bold()
                                 .multilineTextAlignment(.leading)

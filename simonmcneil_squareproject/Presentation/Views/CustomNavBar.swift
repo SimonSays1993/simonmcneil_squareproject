@@ -1,10 +1,3 @@
-//
-//  CustomNavBar.swift
-//  simonmcneil_squareproject
-//
-//  Created by Simon Mcneil on 2023-01-08.
-//
-
 import SwiftUI
 
 struct CustomNavBar: View {
@@ -44,7 +37,6 @@ struct CustomNavBar: View {
         }
         .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
     }
-    
 }
 
 struct CustomNavBar_Previews: PreviewProvider {

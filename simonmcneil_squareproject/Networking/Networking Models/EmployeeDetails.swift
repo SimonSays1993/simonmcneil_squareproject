@@ -15,16 +15,29 @@ struct EmployeeDetails: Decodable {
         case contractor = "CONTRACTOR"
         case fullTime = "FULL_TIME"
         case partTime = "PART_TIME"
-        
-        var employedStatusDescription: String {
-            switch self {
-            case .contractor:
-                return "Contractor"
-            case .fullTime:
-                return "Full Time"
-            case .partTime:
-                return "Part Time"
-            }
+    }
+}
+
+extension EmployeeDetails.EmployedStatus {
+    var employedStatusDescription: String {
+        switch self {
+        case .contractor:
+            return "Contractor"
+        case .fullTime:
+            return "Full Time"
+        case .partTime:
+            return "Part Time"
+        }
+    }
+    
+    var sectionOrder: Int {
+        switch self {
+        case .fullTime:
+            return 0
+        case .partTime:
+            return 1
+        case .contractor:
+            return 2
         }
     }
 }
