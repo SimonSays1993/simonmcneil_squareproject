@@ -35,7 +35,7 @@
 		2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23D8296A8FDF007C8BE5 /* ApiPreviewClient.swift */; };
 		2DBE23F6296B6B47007C8BE5 /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */; };
 		2DBE23F8296B6BBD007C8BE5 /* ImageLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */; };
-		2DBE23FD296B6C50007C8BE5 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */; };
+		2DBE23FD296B6C50007C8BE5 /* ImageDiskFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FC296B6C50007C8BE5 /* ImageDiskFileManager.swift */; };
 		2DBE23FF296B6CC5007C8BE5 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */; };
 		2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */; };
 		2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2405296BC733007C8BE5 /* ImageModel.swift */; };
@@ -89,7 +89,7 @@
 		2DBE23EF296B4EE9007C8BE5 /* MockApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiEndPoints.swift; sourceTree = "<group>"; };
 		2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
 		2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingViewModel.swift; sourceTree = "<group>"; };
-		2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		2DBE23FC296B6C50007C8BE5 /* ImageDiskFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDiskFileManager.swift; sourceTree = "<group>"; };
 		2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		2DBE2405296BC733007C8BE5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				2DBE23BF296A35F0007C8BE5 /* InfoPlistParser.swift */,
-				2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */,
+				2DBE23FC296B6C50007C8BE5 /* ImageDiskFileManager.swift */,
 				2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */,
 			);
 			path = Utilities;
@@ -428,7 +428,7 @@
 				2DBE23F6296B6B47007C8BE5 /* DownloadImageView.swift in Sources */,
 				2DBE23EE296B4ECB007C8BE5 /* EndpointConfigurable.swift in Sources */,
 				2DBE23C2296A3761007C8BE5 /* APIService.swift in Sources */,
-				2DBE23FD296B6C50007C8BE5 /* ImageCacheManager.swift in Sources */,
+				2DBE23FD296B6C50007C8BE5 /* ImageDiskFileManager.swift in Sources */,
 				2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */,
 				2DBE23B6296A2DC7007C8BE5 /* HTTPMethod.swift in Sources */,
 				2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */,

@@ -7,10 +7,10 @@ final class ImageLoadingViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
-    private let cacheManager: ImageCacheManager
+    private let cacheManager: ImageDiskFileManager
     private(set) var imageModel: ImageModel
     
-    init(imageModel: ImageModel, manager: ImageCacheManager = .instance) {
+    init(imageModel: ImageModel, manager: ImageDiskFileManager = .instance) {
         self.imageModel = imageModel
         self.cacheManager = manager
         getImage()
