@@ -39,7 +39,7 @@ class ImageDiskFileManager {
     }
     
     func add(key: String, value: UIImage) {
-        guard let data = value.jpegData(compressionQuality: 1), let url = getImagePath(key: key) else {
+        guard let data = value.jpegData(compressionQuality: 0.8), let url = getImagePath(key: key) else {
             return
         }
             
