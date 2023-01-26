@@ -39,6 +39,12 @@
 		2DBE23FF296B6CC5007C8BE5 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */; };
 		2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */; };
 		2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2405296BC733007C8BE5 /* ImageModel.swift */; };
+		2DE5A71129831D62003CF0AC /* OffsetPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A71029831D62003CF0AC /* OffsetPreferenceKey.swift */; };
+		2DE5A715298320A9003CF0AC /* ShyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A714298320A9003CF0AC /* ShyHeaderView.swift */; };
+		2DE5A7172983232C003CF0AC /* Ext+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A7162983232C003CF0AC /* Ext+View.swift */; };
+		2DE5A71B2983382B003CF0AC /* TrackableScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A71A2983382B003CF0AC /* TrackableScroll.swift */; };
+		2DE5A71E2983387E003CF0AC /* SafeAreaValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A71D2983387E003CF0AC /* SafeAreaValues.swift */; };
+		2DE5A72229833B4D003CF0AC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A72129833B4D003CF0AC /* EmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,12 @@
 		2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		2DBE2405296BC733007C8BE5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		2DE5A71029831D62003CF0AC /* OffsetPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetPreferenceKey.swift; sourceTree = "<group>"; };
+		2DE5A714298320A9003CF0AC /* ShyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShyHeaderView.swift; sourceTree = "<group>"; };
+		2DE5A7162983232C003CF0AC /* Ext+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
+		2DE5A71A2983382B003CF0AC /* TrackableScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScroll.swift; sourceTree = "<group>"; };
+		2DE5A71D2983387E003CF0AC /* SafeAreaValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaValues.swift; sourceTree = "<group>"; };
+		2DE5A72129833B4D003CF0AC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				2DBE23E2296B2CB3007C8BE5 /* Ext+Sequence.swift */,
+				2DE5A7162983232C003CF0AC /* Ext+View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,6 +260,8 @@
 				2D087FE0296A261600004EC5 /* HomeView.swift */,
 				2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */,
 				2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */,
+				2DE5A714298320A9003CF0AC /* ShyHeaderView.swift */,
+				2DE5A72129833B4D003CF0AC /* EmptyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +269,9 @@
 		2DBE23F9296B6C09007C8BE5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2DE5A71C2983386A003CF0AC /* CustomEnvironments */,
+				2DE5A7192983381C003CF0AC /* ViewModifiers */,
+				2DE5A70F29831D48003CF0AC /* PreferenceKeys */,
 				2DBE23BF296A35F0007C8BE5 /* InfoPlistParser.swift */,
 				2DBE23FC296B6C50007C8BE5 /* ImageDiskFileManager.swift */,
 				2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */,
@@ -279,6 +297,30 @@
 				2DBE23F4296B6B36007C8BE5 /* Views */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2DE5A70F29831D48003CF0AC /* PreferenceKeys */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5A71029831D62003CF0AC /* OffsetPreferenceKey.swift */,
+			);
+			path = PreferenceKeys;
+			sourceTree = "<group>";
+		};
+		2DE5A7192983381C003CF0AC /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5A71A2983382B003CF0AC /* TrackableScroll.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		2DE5A71C2983386A003CF0AC /* CustomEnvironments */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5A71D2983387E003CF0AC /* SafeAreaValues.swift */,
+			);
+			path = CustomEnvironments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,19 +468,25 @@
 				2DBE23FF296B6CC5007C8BE5 /* UIHelper.swift in Sources */,
 				2DBE23B8296A2FDB007C8BE5 /* Resource.swift in Sources */,
 				2DBE23F6296B6B47007C8BE5 /* DownloadImageView.swift in Sources */,
+				2DE5A7172983232C003CF0AC /* Ext+View.swift in Sources */,
+				2DE5A71B2983382B003CF0AC /* TrackableScroll.swift in Sources */,
 				2DBE23EE296B4ECB007C8BE5 /* EndpointConfigurable.swift in Sources */,
 				2DBE23C2296A3761007C8BE5 /* APIService.swift in Sources */,
 				2DBE23FD296B6C50007C8BE5 /* ImageDiskFileManager.swift in Sources */,
+				2DE5A71E2983387E003CF0AC /* SafeAreaValues.swift in Sources */,
 				2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */,
 				2DBE23B6296A2DC7007C8BE5 /* HTTPMethod.swift in Sources */,
 				2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */,
 				2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */,
+				2DE5A72229833B4D003CF0AC /* EmptyView.swift in Sources */,
 				2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */,
 				2DBE23AF296A2CC0007C8BE5 /* EmployeeDetails.swift in Sources */,
+				2DE5A715298320A9003CF0AC /* ShyHeaderView.swift in Sources */,
 				2DBE23C7296A3A8A007C8BE5 /* ApiServiceClient.swift in Sources */,
 				2D087FDF296A261600004EC5 /* simonmcneil_squareprojectApp.swift in Sources */,
 				2DBE23B1296A2D3F007C8BE5 /* EmployeeSections.swift in Sources */,
 				2DBE23DC296A9B7E007C8BE5 /* DecodeParser.swift in Sources */,
+				2DE5A71129831D62003CF0AC /* OffsetPreferenceKey.swift in Sources */,
 				2DBE23B4296A2D8C007C8BE5 /* APIError.swift in Sources */,
 				2DBE23DF296B2759007C8BE5 /* EmployeeViewModel.swift in Sources */,
 				2DBE23F8296B6BBD007C8BE5 /* ImageLoadingViewModel.swift in Sources */,

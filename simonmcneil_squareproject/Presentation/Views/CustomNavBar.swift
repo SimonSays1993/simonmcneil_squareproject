@@ -35,7 +35,7 @@ struct CustomNavBar: View {
                 Spacer()
             }
         }
-        .padding(EdgeInsets(top: 50, leading: 0, bottom: 0, trailing: 0))
+        .padding(EdgeInsets(top: 55, leading: 0, bottom: 0, trailing: 0))
     }
 }
 

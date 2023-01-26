@@ -6,9 +6,14 @@ final class EmployeeViewModel: ObservableObject {
     @Published private(set) var errorMessage: String = ""
     @Published private(set) var navigationTitle: String = "Employee Directory"
     @Published private(set) var isLoaded: Bool = false
+    @Published private(set) var showShyHeader: Bool = false
     
     private let apiService: APIService
     private let resource: Resource<Employees>
+    
+    var isEmptyView: Bool {
+        employeeSections.isEmpty && errorMessage.isEmpty && isLoaded
+    }
 
     init(apiService: APIService = ApiServiceClient(), resource: Resource<Employees>) {
         self.apiService = apiService
@@ -39,7 +44,9 @@ final class EmployeeViewModel: ObservableObject {
         employeeSections = OrderedDictionary(grouping: sortedEmployeesByName) { $0.position }
             .sortedByKeyPath(by: \.key)
     }
-    
+}
+
+extension EmployeeViewModel {
     func createImageModel(with employee: EmployeeDetails) -> ImageModel {
         ImageModel(id: employee.uuid, imageUrl: employee.photoUrlSmall, name: employee.fullName, team: employee.team)
     }
@@ -48,7 +55,7 @@ final class EmployeeViewModel: ObservableObject {
         employeeSections[key].value.first?.employeePosition ?? "Section Not Found"
     }
     
-    var isEmptyView: Bool {
-        employeeSections.isEmpty && errorMessage.isEmpty && isLoaded
+    func isShyHeaderVisibile(with offset: CGFloat) {
+        showShyHeader = offset >= 139 ? false : true
     }
 }

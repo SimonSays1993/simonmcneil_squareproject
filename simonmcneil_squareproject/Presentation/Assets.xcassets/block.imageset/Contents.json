@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Block_lockup_positive_1000x1000.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
