@@ -45,7 +45,7 @@ final class EmployeeViewModel: ObservableObject {
     }
     
     func sectionTitle(with key: Int) -> String {
-        employeeSections[key].value.first?.employeePosition ?? ""
+        employeeSections[key].value.first?.employeePosition ?? "Section Not Found"
     }
     
     var isEmptyView: Bool {
