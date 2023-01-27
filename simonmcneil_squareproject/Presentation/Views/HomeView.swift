@@ -71,9 +71,8 @@ struct HomeView: View {
                 guard let offset = offset?.rounded() else {
                     return
                 }
-                print(offset)
                 viewModel.isShyHeaderVisibile(with: offset)
-                withAnimation(.easeIn(duration: 0.2)) {
+                withAnimation(.easeIn(duration: 0.1)) {
                     shouldShow = viewModel.showShyHeader
                 }
             }
