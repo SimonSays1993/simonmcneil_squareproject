@@ -15,7 +15,7 @@ final class EmployeeViewModel: ObservableObject {
         employeeSections.isEmpty && errorMessage.isEmpty && isLoaded
     }
 
-    init(apiService: APIService = ApiServiceClient(), resource: Resource<Employees>) {
+    init(apiService: APIService, resource: Resource<Employees>) {
         self.apiService = apiService
         self.resource = resource
     }

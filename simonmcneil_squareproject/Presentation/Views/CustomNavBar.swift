@@ -5,7 +5,7 @@ struct CustomNavBar: View {
     let action: () -> ()
     
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Text("Employee Directory")
                     .font(.system(.largeTitle, design: .rounded))
@@ -23,19 +23,14 @@ struct CustomNavBar: View {
                             .font(.system(.title3, design: .rounded))
                         
                     }
-                }
-                
-                Spacer()
+                }                
             }
             
-            HStack {
-                Text("Meet some employees at Block")
-                    .font(.title3)
-                    .bold()
-                Spacer()
-            }
+            Text("Meet some employees at Block")
+                .font(.title3)
+                .bold()
         }
-        .padding(EdgeInsets(top: 55, leading: 0, bottom: 0, trailing: 0))
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
     }
 }
 

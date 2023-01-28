@@ -45,6 +45,9 @@
 		2DE5A71B2983382B003CF0AC /* TrackableScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A71A2983382B003CF0AC /* TrackableScroll.swift */; };
 		2DE5A71E2983387E003CF0AC /* SafeAreaValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A71D2983387E003CF0AC /* SafeAreaValues.swift */; };
 		2DE5A72229833B4D003CF0AC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A72129833B4D003CF0AC /* EmptyView.swift */; };
+		2DE5A72629836834003CF0AC /* StaticButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A72529836834003CF0AC /* StaticButtonStyle.swift */; };
+		2DE5A72A29836C28003CF0AC /* RefreshOffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A72929836C28003CF0AC /* RefreshOffsetKey.swift */; };
+		2DE5A74829838F03003CF0AC /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE5A74729838F03003CF0AC /* NavigationBarModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,9 @@
 		2DE5A71A2983382B003CF0AC /* TrackableScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScroll.swift; sourceTree = "<group>"; };
 		2DE5A71D2983387E003CF0AC /* SafeAreaValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaValues.swift; sourceTree = "<group>"; };
 		2DE5A72129833B4D003CF0AC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		2DE5A72529836834003CF0AC /* StaticButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticButtonStyle.swift; sourceTree = "<group>"; };
+		2DE5A72929836C28003CF0AC /* RefreshOffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshOffsetKey.swift; sourceTree = "<group>"; };
+		2DE5A74729838F03003CF0AC /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,9 +275,7 @@
 		2DBE23F9296B6C09007C8BE5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2DE5A71C2983386A003CF0AC /* CustomEnvironments */,
-				2DE5A7192983381C003CF0AC /* ViewModifiers */,
-				2DE5A70F29831D48003CF0AC /* PreferenceKeys */,
+				2DE5A72329836804003CF0AC /* View Utilities */,
 				2DBE23BF296A35F0007C8BE5 /* InfoPlistParser.swift */,
 				2DBE23FC296B6C50007C8BE5 /* ImageDiskFileManager.swift */,
 				2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */,
@@ -303,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE5A71029831D62003CF0AC /* OffsetPreferenceKey.swift */,
+				2DE5A72929836C28003CF0AC /* RefreshOffsetKey.swift */,
 			);
 			path = PreferenceKeys;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE5A71A2983382B003CF0AC /* TrackableScroll.swift */,
+				2DE5A74729838F03003CF0AC /* NavigationBarModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -321,6 +327,25 @@
 				2DE5A71D2983387E003CF0AC /* SafeAreaValues.swift */,
 			);
 			path = CustomEnvironments;
+			sourceTree = "<group>";
+		};
+		2DE5A72329836804003CF0AC /* View Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5A72429836825003CF0AC /* ButtonStyles */,
+				2DE5A71C2983386A003CF0AC /* CustomEnvironments */,
+				2DE5A7192983381C003CF0AC /* ViewModifiers */,
+				2DE5A70F29831D48003CF0AC /* PreferenceKeys */,
+			);
+			path = "View Utilities";
+			sourceTree = "<group>";
+		};
+		2DE5A72429836825003CF0AC /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5A72529836834003CF0AC /* StaticButtonStyle.swift */,
+			);
+			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,13 +497,16 @@
 				2DE5A71B2983382B003CF0AC /* TrackableScroll.swift in Sources */,
 				2DBE23EE296B4ECB007C8BE5 /* EndpointConfigurable.swift in Sources */,
 				2DBE23C2296A3761007C8BE5 /* APIService.swift in Sources */,
+				2DE5A74829838F03003CF0AC /* NavigationBarModifier.swift in Sources */,
 				2DBE23FD296B6C50007C8BE5 /* ImageDiskFileManager.swift in Sources */,
 				2DE5A71E2983387E003CF0AC /* SafeAreaValues.swift in Sources */,
 				2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */,
 				2DBE23B6296A2DC7007C8BE5 /* HTTPMethod.swift in Sources */,
 				2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */,
 				2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */,
+				2DE5A72A29836C28003CF0AC /* RefreshOffsetKey.swift in Sources */,
 				2DE5A72229833B4D003CF0AC /* EmptyView.swift in Sources */,
+				2DE5A72629836834003CF0AC /* StaticButtonStyle.swift in Sources */,
 				2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */,
 				2DBE23AF296A2CC0007C8BE5 /* EmployeeDetails.swift in Sources */,
 				2DE5A715298320A9003CF0AC /* ShyHeaderView.swift in Sources */,

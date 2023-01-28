@@ -39,7 +39,7 @@ final class EmployeeViewModelTests: XCTestCase {
     }
     
     func testCreateImageModel() {
-        sut = EmployeeViewModel(resource: .init(endPoint: MockApiEndPoints.employeeDetails))
+        sut = EmployeeViewModel(apiService: ApiPreviewClient(), resource: .init(endPoint: MockApiEndPoints.employeeDetails))
         let employeeDetails = EmployeeDetails(uuid: "1",
                                               fullName: "Jack Dorsey",
                                               phoneNumber: "55555555",
