@@ -7,21 +7,21 @@ class ImageLoadingViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
-    private let cacheManager: ImageCacheManager
+    private let diskManager: DiskManager
     private(set) var imageModel: ImageModel
     
-    init(imageModel: ImageModel, manager: ImageCacheManager = .instance) {
+    init(imageModel: ImageModel, manager: DiskManager = .instance) {
         self.imageModel = imageModel
-        self.cacheManager = manager
+        self.diskManager = manager
         getImage()
     }
     
     func getImage() {
-        if let savedImage = cacheManager.get(key: imageModel.id) {
-            image = savedImage
-        } else {
-            downloadImage()
-        }
+//        if let savedImage = diskManager.get(key: imageModel.id) {
+//            image = savedImage
+//        } else {
+//            downloadImage()
+//        }
     }
     
     func downloadImage() {
@@ -30,20 +30,5 @@ class ImageLoadingViewModel: ObservableObject {
             isLoading = false
             return
         }
-        
-        URLSession.shared.dataTaskPublisher(for: imageUrl)
-            .map { return $0 }
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
-                self?.isLoading = false
-            } receiveValue: { [weak self] returnedImage in
-                guard let self = self, let image = UIImage(data: returnedImage.data) else {
-                    self?.image = UIImage(systemName: "photo.fill")
-                    return
-                }
-                self.cacheManager.add(key: self.imageModel.id, value: image)
-                self.image = UIHelper.downsampleImage(imageData: returnedImage.data)
-            }
-            .store(in: &cancellables)
     }
 }

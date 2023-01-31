@@ -47,7 +47,7 @@ struct HomeView: View {
                 ForEach(viewModel.employeeSections, id: \.key) { sectionDetails in
                     Section {
                         ForEach(sectionDetails.value, id: \.id) { rowDetails in
-                            imageCardView(details: rowDetails.employee)
+                            Text(rowDetails.fullName)
                         }
                     } header: {
                         HStack {

@@ -17,14 +17,24 @@ final class EmployeeViewModel: ObservableObject {
     @MainActor
     func fetchEmployees() async {
         do {
+            try isCached()
             let response = try await apiService.request(resource)
             if response.employees.isEmpty {
                 employeeSections = []
             }
+            try DiskManager.instance.add(employee: response)
             createEmployeeSections(with: response.employees)
         } catch {
             self.navigationTitle = ""
             self.errorMessage = error.localizedDescription
+        }
+    }
+    
+    private func isCached() throws {
+        do {
+            let response = try DiskManager.instance.read()
+        } catch {
+            throw DiskCachingError.decodeError
         }
     }
     
@@ -38,6 +48,6 @@ final class EmployeeViewModel: ObservableObject {
     }
     
     func createImageModel(with employee: EmployeeDetails) -> ImageModel {
-        ImageModel(id: employee.uuid, imageUrl: employee.photoUrlSmall, name: employee.fullName, team: employee.team)
+        ImageModel(id: employee.uuid, imageUrl: employee.photoUrlSmall, name: employee.fullName, team: employee.fullName)
     }
 }

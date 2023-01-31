@@ -10,6 +10,7 @@
 		2D087FDF296A261600004EC5 /* simonmcneil_squareprojectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FDE296A261600004EC5 /* simonmcneil_squareprojectApp.swift */; };
 		2D087FE1296A261600004EC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087FE0296A261600004EC5 /* HomeView.swift */; };
 		2D087FE3296A261700004EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D087FE2296A261700004EC5 /* Assets.xcassets */; };
+		2D9C59472989919600AE6843 /* DiskCachingErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C59462989919600AE6843 /* DiskCachingErrors.swift */; };
 		2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23AC296A2C9C007C8BE5 /* Employees.swift */; };
 		2DBE23AF296A2CC0007C8BE5 /* EmployeeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23AE296A2CC0007C8BE5 /* EmployeeDetails.swift */; };
 		2DBE23B1296A2D3F007C8BE5 /* EmployeeSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23B0296A2D3E007C8BE5 /* EmployeeSections.swift */; };
@@ -35,7 +36,7 @@
 		2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23D8296A8FDF007C8BE5 /* ApiPreviewClient.swift */; };
 		2DBE23F6296B6B47007C8BE5 /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */; };
 		2DBE23F8296B6BBD007C8BE5 /* ImageLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */; };
-		2DBE23FD296B6C50007C8BE5 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */; };
+		2DBE23FD296B6C50007C8BE5 /* DiskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FC296B6C50007C8BE5 /* DiskManager.swift */; };
 		2DBE23FF296B6CC5007C8BE5 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */; };
 		2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */; };
 		2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE2405296BC733007C8BE5 /* ImageModel.swift */; };
@@ -65,6 +66,7 @@
 		2D087FE2296A261700004EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D087FEB296A261700004EC5 /* simonmcneil_squareprojectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simonmcneil_squareprojectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D087FF5296A261700004EC5 /* simonmcneil_squareprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simonmcneil_squareprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9C59462989919600AE6843 /* DiskCachingErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCachingErrors.swift; sourceTree = "<group>"; };
 		2DBE23AC296A2C9C007C8BE5 /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
 		2DBE23AE296A2CC0007C8BE5 /* EmployeeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetails.swift; sourceTree = "<group>"; };
 		2DBE23B0296A2D3E007C8BE5 /* EmployeeSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSections.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 		2DBE23EF296B4EE9007C8BE5 /* MockApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiEndPoints.swift; sourceTree = "<group>"; };
 		2DBE23F5296B6B47007C8BE5 /* DownloadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
 		2DBE23F7296B6BBD007C8BE5 /* ImageLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingViewModel.swift; sourceTree = "<group>"; };
-		2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		2DBE23FC296B6C50007C8BE5 /* DiskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskManager.swift; sourceTree = "<group>"; };
 		2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		2DBE2400296BB305007C8BE5 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		2DBE2405296BC733007C8BE5 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				2DBE23B3296A2D8C007C8BE5 /* APIError.swift */,
 				2DBE23B5296A2DC7007C8BE5 /* HTTPMethod.swift */,
 				2DBE23B9296A32BD007C8BE5 /* APIEndpoint.swift */,
+				2D9C59462989919600AE6843 /* DiskCachingErrors.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -256,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				2DBE23BF296A35F0007C8BE5 /* InfoPlistParser.swift */,
-				2DBE23FC296B6C50007C8BE5 /* ImageCacheManager.swift */,
+				2DBE23FC296B6C50007C8BE5 /* DiskManager.swift */,
 				2DBE23FE296B6CC5007C8BE5 /* UIHelper.swift */,
 			);
 			path = Utilities;
@@ -428,13 +431,14 @@
 				2DBE23F6296B6B47007C8BE5 /* DownloadImageView.swift in Sources */,
 				2DBE23EE296B4ECB007C8BE5 /* EndpointConfigurable.swift in Sources */,
 				2DBE23C2296A3761007C8BE5 /* APIService.swift in Sources */,
-				2DBE23FD296B6C50007C8BE5 /* ImageCacheManager.swift in Sources */,
+				2DBE23FD296B6C50007C8BE5 /* DiskManager.swift in Sources */,
 				2DBE23AD296A2C9C007C8BE5 /* Employees.swift in Sources */,
 				2DBE23B6296A2DC7007C8BE5 /* HTTPMethod.swift in Sources */,
 				2DBE23F2296B5611007C8BE5 /* ApiPreviewClient.swift in Sources */,
 				2DBE2406296BC733007C8BE5 /* ImageModel.swift in Sources */,
 				2DBE2401296BB305007C8BE5 /* CustomNavBar.swift in Sources */,
 				2DBE23AF296A2CC0007C8BE5 /* EmployeeDetails.swift in Sources */,
+				2D9C59472989919600AE6843 /* DiskCachingErrors.swift in Sources */,
 				2DBE23C7296A3A8A007C8BE5 /* ApiServiceClient.swift in Sources */,
 				2D087FDF296A261600004EC5 /* simonmcneil_squareprojectApp.swift in Sources */,
 				2DBE23B1296A2D3F007C8BE5 /* EmployeeSections.swift in Sources */,
